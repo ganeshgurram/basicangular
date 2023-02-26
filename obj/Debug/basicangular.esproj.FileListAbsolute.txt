@@ -1,0 +1,2 @@
+D:\angular\basicangular\basicangular\obj\Debug\basicangular.esproj.SuggestedBindingRedirects.cache
+D:\angular\basicangular\basicangular\obj\Debug\basicangular.esproj.CoreCompileInputs.cache
