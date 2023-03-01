@@ -1,25 +1,25 @@
 
   <h1><b>Registration</b></h1>
   <div class="container">
-    <form #register="ngForm" (ngSubmit)="newregister()">
+    <form #register="ngForm" (ngSubmit)="newregister(register)">
       <div class="form-group">
         <label for="firstname">First Name </label>
-        <input type="text" name="firstname" class="form-control" ngModel />
+        <input type="text" class="form-control" name="FirstName" [(ngModel)]="FirstName" />
       </div>
       <br />
       <div class="form-group">
         <label for="lastname">Last Name </label>
-        <input type="text" name="lastname" class="form-control" ngModel />
+        <input type="text" class="form-control" name="LastName" [(ngModel)]="LastName" />
       </div>
       <br />
       <div class="form-group">
         <label for="dob">Date of Birth </label>
-        <input type="date" name="Date" class="form-control" ngModel />
+        <input type="date" class="form-contro" name="Dob" [(ngModel)]="Dob" />
       </div>
       <br />
       <div class="form-group">
         <label for="gender">Gender</label>
-        <select (change)="gendervalue($event)">
+        <select (change)="gendervalue($event)"  name="Gender" [(ngModel)]="Gender">
           <option value="">Select</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -28,22 +28,24 @@
       <br />
       <div class="form-group">
         <label for="email">Email </label>
-
-        <input type="email" name="email" class="form-control" ngModel />
+        <input type="email" class="form-control" name="Email" [(ngModel)]="Email" />
       </div>
       <br />
       <div class="form-group">
         <label for="username">UserName</label>
-
-        <input type="text" name="username" class="form-control" ngModel />
+      <input type="text" class="form-control" name="UserName" [(ngModel)]="UserName" />
       </div>
       <br />
       <div class="form-group">
         <label for="password">Password </label>
-        <input type="password" name="password" class="form-control" ngModel />
+        <input type="password" class="form-control" name="Password" [(ngModel)]="Password" />
       </div>
       <br />
       <br />
       <button class="btn btn-primary" type="submit">Register</button>
     </form>
+    <div *ngif="check">
+      <h1>Succesfully Registered</h1>
+    </div>
+
   </div>
