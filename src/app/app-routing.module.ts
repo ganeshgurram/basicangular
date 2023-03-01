@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { RFormComponent } from './rform/rform.component';
+import { RegistrationFormComponent } from './RegistrationForm/RegistrationForm.component';
 import { SigninupComponent } from './signinup/signinup.component';
 import { LoginComponent } from './login/login.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '',redirectTo:'signinup',pathMatch:'full'
   },
   {
-    path:'register',component:RFormComponent
+    path:'register',component:RegistrationFormComponent
   },
   {
     path: 'signinup', component: SigninupComponent

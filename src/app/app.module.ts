@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { RFormComponent } from './rform/rform.component';
+import { RegistrationFormComponent } from './RegistrationForm/RegistrationForm.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { LoginComponent } from './login/login.component';
@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    RFormComponent,
+    RegistrationFormComponent,
     UserinfoComponent,
     LoginComponent,
     SigninupComponent,

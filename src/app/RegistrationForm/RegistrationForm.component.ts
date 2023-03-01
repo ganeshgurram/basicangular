@@ -2,11 +2,11 @@ import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-rform',
-  templateUrl: './rform.component.html',
-  styleUrls: ['./rform.component.css']
+  selector: 'app-RegistrationForm',
+  templateUrl: './RegistrationForm.component.html',
+  styleUrls: ['./RegistrationForm.component.css']
 })
-export class RFormComponent {
+export class RegistrationFormComponent {
   constructor(private router: Router ) { }
   newregister() {
    // console.log("Form submitted", register);
