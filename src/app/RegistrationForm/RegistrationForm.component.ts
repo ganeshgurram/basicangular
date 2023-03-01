@@ -13,4 +13,8 @@ export class RFormComponent {
     this.router.navigate(['/login']);
  
   }
+  public dropdownvalue = "";
+  gendervalue(drpvalue: any) {
+    this.dropdownvalue = drpvalue.target.value;
+  }
 }

@@ -18,9 +18,24 @@
       </div>
       <br />
       <div class="form-group">
+        <label for="gender">Gender</label>
+        <select (change)="gendervalue($event)">
+          <option value="">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <br />
+      <div class="form-group">
         <label for="email">Email </label>
-        
+
         <input type="email" name="email" class="form-control" ngModel />
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="username">UserName</label>
+
+        <input type="text" name="username" class="form-control" ngModel />
       </div>
       <br />
       <div class="form-group">

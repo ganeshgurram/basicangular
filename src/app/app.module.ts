@@ -8,6 +8,7 @@ import { UserinfoComponent } from './userinfo/userinfo.component';
 import { LoginComponent } from './login/login.component';
 import { SigninupComponent } from './signinup/signinup.component';
 import { SuccessfulComponent } from './successful/successful.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SuccessfulComponent } from './successful/successful.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
