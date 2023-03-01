@@ -4,16 +4,27 @@
     <div class="form-group">
       <label for="username">UserName</label>
 
-      <input type="text" name="username" class="form-control" ngModel />
+      <input type="text" name="UserName" class="form-control" [(ngModel)]="UserName" />
     </div>
     <br />
     <div class="form-group">
       <label for="password">Password </label>
-      <input type="password" name="password" class="form-control" ngModel />
+      <input type="password" name="Password" class="form-control" [(ngModel)]="Password" />
     </div>
     <br />
     <br />
     <button class="btn btn-primary" type="submit">Login</button>
   </form>
+  <h1>{{UserName}}</h1>
+  <h1>{{username}}</h1>
+  <h1>{{person.username}}</h1>
+  <h1>{{password}}</h1>
+
+  <div *ngIf="checkstatus">
+    <h1>Valid User</h1>
+  </div>
+  <div *ngIf="!checkstatus">
+    <h1>Invalid</h1>
+  </div>
   </div>
 

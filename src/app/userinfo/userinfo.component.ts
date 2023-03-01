@@ -16,7 +16,7 @@ export class UserinfoComponent implements OnInit{
     }
 
 getperson() { 
-  this.userinfos.getpersoninfo().subscribe(
+  this.userinfos.getallpersonsinfo().subscribe(
     r => {
       console.log(r);
     }
