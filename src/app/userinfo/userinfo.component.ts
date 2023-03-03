@@ -7,19 +7,19 @@ import { UserinfoserviceService } from '../services/userinfoservice.service';
   templateUrl: './userinfo.component.html',
   styleUrls: ['./userinfo.component.css']
 })
-export class UserinfoComponent implements OnInit{
+export class UserinfoComponent implements OnInit {
   constructor(private userinfos: UserinfoserviceService) { }
 
-  
-    ngOnInit():void {
-     this.getperson();
-    }
+ persons: Person[] = [];
+  ngOnInit(): void {
+    this.getallperson();
+  }
 
-getperson() { 
-  this.userinfos.getallpersonsinfo().subscribe(
-    r => {
-      console.log(r);
-    }
-  );
-}
+  getallperson() {
+    this.userinfos.getallpersonsinfo().subscribe(
+      response => {
+        this.persons = response;
+      
+    });
+  }
 }

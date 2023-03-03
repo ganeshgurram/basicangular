@@ -1,4 +1,13 @@
 <h1>User Information</h1>
 <div class="container">
-   
+  <h2>{{persons}}</h2>
+  <div *ngFor ="let person of persons">
+  <div class="card">
+     <h3>User Name : {{person.username}}</h3>
+    <div class="container">
+      <h4><b>John Doe</b></h4>
+      <p>Architect & Engineer</p>
+    </div>
+ </div>
+  </div>
 </div>

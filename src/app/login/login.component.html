@@ -15,16 +15,17 @@
     <br />
     <button class="btn btn-primary" type="submit">Login</button>
   </form>
-  <h1>{{UserName}}</h1>
   <h1>{{username}}</h1>
-  <h1>{{person.username}}</h1>
-  <h1>{{password}}</h1>
 
-  <div *ngIf="checkstatus">
-    <h1>Valid User</h1>
+  <h1>{{password}}</h1>
+  <h1>{{password2 +"k"}}</h1>
+
+  <div *ngIf='checkstatus'>
+    <app-singleuserinfo [uname]="UserName"> </app-singleuserinfo>
   </div>
-  <div *ngIf="!checkstatus">
+  <div *ngIf='!checkstatus'>
     <h1>Invalid</h1>
   </div>
-  </div>
+  
+</div>
 

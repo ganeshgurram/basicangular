@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SigninupComponent } from './signinup/signinup.component';
 import { SuccessfulComponent } from './successful/successful.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SingleuserinfoComponent } from './singleuserinfo/singleuserinfo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserinfoComponent,
     LoginComponent,
     SigninupComponent,
-    SuccessfulComponent
+    SuccessfulComponent,
+    SingleuserinfoComponent
   ],
   imports: [
     BrowserModule,
