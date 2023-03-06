@@ -6,6 +6,7 @@ import { SigninupComponent } from './signinup/signinup.component';
 import { LoginComponent } from './login/login.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import {SuccessfulComponent } from './successful/successful.component'
+import { EditpersonComponent } from './editperson/editperson.component';
 const routes: Routes = [
   {
     path: '',redirectTo:'signinup',pathMatch:'full'
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   {
     path: 'successful', component: SuccessfulComponent
+  },
+  {
+    path:'editperson',component:EditpersonComponent
   }
 
 ];

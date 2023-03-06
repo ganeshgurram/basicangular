@@ -1,13 +1,17 @@
 <h1>User Information</h1>
 <div class="container">
-  <h2>{{persons}}</h2>
-  <div *ngFor ="let person of persons">
+  <div *ngFor ="let i of persons">
   <div class="card">
-     <h3>User Name : {{person.username}}</h3>
-    <div class="container">
-      <h4><b>John Doe</b></h4>
-      <p>Architect & Engineer</p>
-    </div>
- </div>
+     <h3>User Name : {{i.userName}}</h3>
+     <div class="container">
+       <h4> FirstName : {{i.firstName}} </h4>
+       <h4> LastName  : {{i.lastName}}</h4>
+       <input type="button" (click)="deleteperson(i.userName)" value="Delete" />
+       <a routerLink="/editperson" routerLinkActive="active">Edit</a>
+
+     
+   </div>
+   
+     </div>
   </div>
 </div>

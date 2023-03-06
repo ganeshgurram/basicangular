@@ -10,6 +10,7 @@ import { SigninupComponent } from './signinup/signinup.component';
 import { SuccessfulComponent } from './successful/successful.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SingleuserinfoComponent } from './singleuserinfo/singleuserinfo.component';
+import { EditpersonComponent } from './editperson/editperson.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SingleuserinfoComponent } from './singleuserinfo/singleuserinfo.compone
     LoginComponent,
     SigninupComponent,
     SuccessfulComponent,
-    SingleuserinfoComponent
+    SingleuserinfoComponent,
+    EditpersonComponent
   ],
   imports: [
     BrowserModule,

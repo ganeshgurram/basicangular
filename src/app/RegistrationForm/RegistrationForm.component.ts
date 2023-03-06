@@ -22,21 +22,21 @@ export class RegistrationFormComponent {
   check: boolean = false;
 
   person :Person={
-  firstname: '',
-  lastname: '',
+  firstName: '',
+  lastName: '',
   email: '',
-  username: '',
+  userName: '',
   gender: '',
   password:'',
   dob: '',
 }
   constructor(private userinfos: UserinfoserviceService) { }
   newregister(register: NgForm): void {
-    this.person.username = register.controls['UserName'].value;
+    this.person.userName = register.controls['UserName'].value;
     this.person.dob = register.controls['Dob'].value;
     this.person.email = register.controls['Email'].value;
-    this.person.firstname = register.controls['FirstName'].value;
-    this.person.lastname = register.controls['LastName'].value;
+    this.person.firstName = register.controls['FirstName'].value;
+    this.person.lastName = register.controls['LastName'].value;
     this.person.gender = register.controls['Gender'].value;
     this.person.password = register.controls['Password'].value;
     this.userinfos.addperson(this.person).subscribe();

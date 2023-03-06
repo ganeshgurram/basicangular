@@ -11,19 +11,24 @@ export class SingleuserinfoComponent {
 
   constructor(private userinfos: UserinfoserviceService) { }
   person: Person = {
-    firstname: '',
-    lastname: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    username: '',
+    userName: '',
     gender: '',
     password: '',
     dob: '',
   }
-  @Input() uname: any;
+  @Input() uname: string="";
 
   ngOnInit() {
-    
+    this.getperson();
   }
-
+  getperson() {
+    this.userinfos.getpersoninfo(this.uname).subscribe(r => {
+      this.person = r;
+    })
+  }
+ 
   //ngOnInit():
 }
