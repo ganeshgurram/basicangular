@@ -30,8 +30,5 @@ export class UserinfoComponent implements OnInit {
         this.getallperson();
       });
   }
-  editperson1() {
-    this.status = true;
-  }
 
 }

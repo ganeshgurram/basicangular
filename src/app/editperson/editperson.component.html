@@ -1,1 +1,46 @@
-<p>editperson works!</p>
+<h1> Edit Form</h1>
+<div class="container">
+  <form #register="ngForm" (ngSubmit)="newedit()">
+    <div class="form-group">
+      <label for="firstname">First Name </label>
+      <input type="text" class="form-control" name="FirstName" [(ngModel)]="person.firstName" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="lastname">Last Name </label>
+      <input type="text" class="form-control" name="LastName" [(ngModel)]="person.lastName" />
+    </div>
+    <br />
+
+    <br />
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select (change)="gendervalue($event)" name="Gender" [(ngModel)]="person.gender">
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="email">Email </label>
+      <input type="email" class="form-control" name="Email" [(ngModel)]="person.email" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="username">UserName</label>
+      <input type="text" class="form-control" name="UserName" [(ngModel)]="person.userName" />
+    </div>
+    <br />
+    <div class="form-group">
+      <label for="password">Password </label>
+      <input type="password" class="form-control" name="Password" [(ngModel)]="person.password" />
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary" type="submit">Save</button>
+  </form>
+  </div>
+  <div *ngIf="check">
+    <h1>Succesfully Saved</h1>
+  </div>

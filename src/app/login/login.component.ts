@@ -16,8 +16,12 @@ export class LoginComponent {
   public username: any;
   public password: any;
   public password2: any;
-  public checkstatus :boolean = false;
+  public checkstatus: boolean = false;
+  public sd: boolean=false;
+  public stat:string="";
   constructor(private userinfos: UserinfoserviceService, private router: Router) { }
+
+
   logger(login: NgForm) {
     this.username = login.controls['UserName'].value;
     this.password = login.controls['Password'].value;
@@ -27,10 +31,14 @@ export class LoginComponent {
     this.userinfos.getpersoninfo(this.username).subscribe(r => {
       this.password2 = r['password'];
       if (this.password2 === this.password) {
-       // this.checkstatus = true;
-     //   this.router.navigate(['/successful']);
+
         this.checkstatus = true;
 
+      
+
+      }
+      else {
+        this.stat = this.stat + "Invalid User";
       }
     });
    

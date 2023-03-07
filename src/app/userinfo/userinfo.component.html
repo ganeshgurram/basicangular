@@ -7,7 +7,7 @@
        <h4> FirstName : {{i.firstName}} </h4>
        <h4> LastName  : {{i.lastName}}</h4>
        <input type="button" (click)="deleteperson(i.userName)" value="Delete" />
-       <a routerLink="/editperson" routerLinkActive="active">Edit</a>
+       <a routerLink="/editperson/{{i.userName}}" routerLinkActive="active">Edit</a>
 
      
    </div>

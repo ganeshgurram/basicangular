@@ -23,6 +23,8 @@ export class UserinfoserviceService {
     return this.http.delete<Person>(this.baseurl + "/" + username);
   }
   editperson(person: Person): Observable<Person> {
+    console.log(person.userName);
     return this.http.put<Person>(this.baseurl + '/' + person.userName, person);
+  
   }
 }

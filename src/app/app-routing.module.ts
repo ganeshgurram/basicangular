@@ -27,8 +27,8 @@ const routes: Routes = [
     path: 'successful', component: SuccessfulComponent
   },
   {
-    path:'editperson',component:EditpersonComponent
-  }
+    path:'editperson/:username',component:EditpersonComponent
+  },
 
 ];
 

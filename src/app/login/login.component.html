@@ -19,8 +19,8 @@
   <div *ngIf='checkstatus'>
     <app-singleuserinfo [uname]="UserName"> </app-singleuserinfo>
   </div>
-  <div *ngIf='!checkstatus'>
-    <h1>Invalid User</h1>
+  <div *ngIf="!checkstatus">
+    <h1>{{stat}}</h1>
   </div>
   
 </div>
