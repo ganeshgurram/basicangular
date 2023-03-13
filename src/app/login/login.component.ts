@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Person } from '../Models/Person.model';
+import { AuthService } from '../services/auth.service';
 import { UserinfoserviceService } from '../services/userinfoservice.service';
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent {
   public checkstatus: boolean = false;
   public sd: boolean=false;
   public stat:string="";
-  constructor(private userinfos: UserinfoserviceService, private router: Router) { }
+  constructor(private userinfos: UserinfoserviceService, private router: Router, private authservice: AuthService) { }
 
 
   logger(login: NgForm) {
@@ -34,12 +35,16 @@ export class LoginComponent {
 
         this.checkstatus = true;
         console.warn(r);
+        this.authservice.isLoggedIn();
+        console.log(this.authservice.login);
 
       }
       else {
-        this.stat = this.stat + "Invalid User";
+        this.stat = "Invalid User";
       }
     });
    
   }
+ 
+  
 }

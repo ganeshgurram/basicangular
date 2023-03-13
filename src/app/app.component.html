@@ -1,4 +1,9 @@
 <a  routerLink="register" routerLinkActive="active"> Register |</a>
 <a  routerLink='login' routerLinkActive="active">Login |</a>
 <a  routerLink="userinfo" routerLinkActive="active">UserInfo </a>
+<div *ngIf='this.login'>
+  <div class="form-group">
+    <button type="button" (click)="logout()">Logout</button>
+  </div>
+</div>
 <router-outlet></router-outlet>

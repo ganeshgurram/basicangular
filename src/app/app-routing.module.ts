@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import {SuccessfulComponent } from './successful/successful.component'
 import { EditpersonComponent } from './editperson/editperson.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {
     path: '',redirectTo:'signinup',pathMatch:'full'
@@ -18,16 +19,16 @@ const routes: Routes = [
     path: 'signinup', component: SigninupComponent
   },
    {
-    path: 'login', component: LoginComponent
+     path: 'login', component: LoginComponent
   },
   {
-    path:'userinfo',component:UserinfoComponent
+    path: 'userinfo', component: UserinfoComponent, canActivate: [AuthGuard]
   },
   {
     path: 'successful', component: SuccessfulComponent
   },
   {
-    path:'editperson/:username',component:EditpersonComponent
+    path: 'editperson/:username', component: EditpersonComponent
   },
 
 ];

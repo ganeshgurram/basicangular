@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Person } from '../Models/Person.model';
+import { AuthService } from '../services/auth.service';
 import { UserinfoserviceService } from '../services/userinfoservice.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { UserinfoserviceService } from '../services/userinfoservice.service';
   styleUrls: ['./userinfo.component.css']
 })
 export class UserinfoComponent implements OnInit {
-  constructor(private userinfos: UserinfoserviceService) { }
+  constructor(private userinfos: UserinfoserviceService,private authservice:AuthService) { }
   public status: boolean = false;
   public persons: Person[]=[];
   ngOnInit(): void {
