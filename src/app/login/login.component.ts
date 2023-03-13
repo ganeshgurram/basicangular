@@ -33,8 +33,7 @@ export class LoginComponent {
       if (this.password2 === this.password) {
 
         this.checkstatus = true;
-
-      
+        console.warn(r);
 
       }
       else {

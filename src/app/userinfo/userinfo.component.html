@@ -1,6 +1,9 @@
 <h1>User Information</h1>
 <div class="container">
-  <div *ngFor ="let i of persons">
+
+  <label class="container"></label>
+  <input type="text" class="container" [(ngModel)]="name" name="name" placeholder="Enter Name for Search" />
+  <div *ngFor ="let i of persons | filter:name">
   <div class="card">
      <h3>User Name : {{i.userName}}</h3>
      <div class="container">

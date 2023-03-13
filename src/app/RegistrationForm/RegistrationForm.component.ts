@@ -39,7 +39,9 @@ export class RegistrationFormComponent {
     this.person.lastName = register.controls['LastName'].value;
     this.person.gender = register.controls['Gender'].value;
     this.person.password = register.controls['Password'].value;
-    this.userinfos.addperson(this.person).subscribe();
+    this.userinfos.addperson(this.person).subscribe(r => {
+      console.warn(r);
+    });
     register.resetForm();
     this.check = true;
                                                                                                                                                                                                                                                

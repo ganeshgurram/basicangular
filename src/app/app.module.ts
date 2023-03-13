@@ -11,6 +11,7 @@ import { SuccessfulComponent } from './successful/successful.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SingleuserinfoComponent } from './singleuserinfo/singleuserinfo.component';
 import { EditpersonComponent } from './editperson/editperson.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditpersonComponent } from './editperson/editperson.component';
     SigninupComponent,
     SuccessfulComponent,
     SingleuserinfoComponent,
-    EditpersonComponent
+    EditpersonComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

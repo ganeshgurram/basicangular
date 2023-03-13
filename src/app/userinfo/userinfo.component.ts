@@ -15,6 +15,7 @@ export class UserinfoComponent implements OnInit {
   ngOnInit(): void {
     this.getallperson();
   }
+  public name: string="";
 
   getallperson() {
     this.userinfos.getallpersonsinfo().subscribe(
