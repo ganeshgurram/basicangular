@@ -1,9 +1,9 @@
 <h1>User Information</h1>
 <div class="container">
-  
+
   <label class="container"></label>
   <input type="text" class="container" [(ngModel)]="name" name="name" placeholder="Enter Name for Search" />
-  <div *ngFor="let i of persons | filter:name">
+  <div *ngFor="let i of persons | filter:name |paginate :{itemsPerPage:2,currentPage:p}">
     <div class="card">
       <h3>User Name : {{i.userName}}</h3>
       <div class="container">
@@ -17,4 +17,5 @@
 
     </div>
   </div>
+  <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
 </div>
