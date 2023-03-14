@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SingleuserinfoComponent } from './singleuserinfo/singleuserinfo.component';
 import { EditpersonComponent } from './editperson/editperson.component';
 import { FilterPipe } from './filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FilterPipe } from './filter.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxPaginationModule,
     HttpClientModule
   ],
   providers: [],
